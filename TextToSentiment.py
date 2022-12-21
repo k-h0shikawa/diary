@@ -20,4 +20,5 @@ if __name__ == "__main__":
     print(days)
     print(sentiments)
 
-    Plot(days, sentiments)
+    plot = Plot(days, sentiments)
+    plot.save()

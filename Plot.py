@@ -9,7 +9,15 @@ class Plot:
         """
         コンストラクタ
         """
-        plt.plot(x, y);
-        plt.show()
+        plt.plot(x, y)
+    
+    def save(self):
+        """
+        画像として保存
+        """
+        plt.savefig("./image/graph.png")
+    
+    
+        
  
 
