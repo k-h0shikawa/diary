@@ -1,4 +1,4 @@
-name: Action Sample
+name: UPDATE README
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  numpy-test:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,5 +23,5 @@ jobs:
       - name: Run Python
         run: 
           python TextToSentiment.py
-          mv ./scripts/README_template.md ./README.md
+          # mv ./scripts/README_template.md ./README.md
 

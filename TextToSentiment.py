@@ -4,7 +4,7 @@ import os
 
 if __name__ == "__main__":
     sentimentAnalysis = SentimentAnalysis()
-    filenames = os.listdir("./text");
+    filenames = os.listdir("./text")
     sentiments = list()
     days = list()
     for filename in filenames:
@@ -24,9 +24,13 @@ if __name__ == "__main__":
     plot = Plot(days, sentiments)
     plot.save()
 
-    with open("./scripts/README_template.md", mode="a") as readme:
-        readme.write("![sentiment graph](./image/graph.png)")
-
-    ## 確認用
+    read_me_text = ""
     with open("./scripts/README_template.md") as readme:
-        print(readme.read())
+        read_me_text += readme.read()
+
+    read_me_text += "![sentiment graph](./image/graph.png)"
+
+    print(read_me_text)
+    ## 確認用
+    with open("./README.md", "w") as readme:
+        readme.write(read_me_text)
