@@ -15,7 +15,7 @@ class Plot:
         """
         画像として保存
         """
-        plt.savefig("./image/graph.png")
+        plt.savefig("./graph.png")
     
     
         

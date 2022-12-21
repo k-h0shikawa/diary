@@ -28,7 +28,7 @@ if __name__ == "__main__":
     with open("./scripts/README_template.md") as readme:
         read_me_text += readme.read()
 
-    read_me_text += "![sentiment graph](./image/graph.png)"
+    read_me_text += "![sentiment graph](./graph.png)"
 
     print(read_me_text)
     ## 確認用
