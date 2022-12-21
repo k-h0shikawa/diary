@@ -23,5 +23,5 @@ jobs:
       - name: Run Python
         run: 
           python TextToSentiment.py
-          mv ./script/README.md ./README.md
+          mv ./scripts/README_template.md ./README.md
 

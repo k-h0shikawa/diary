@@ -24,8 +24,8 @@ if __name__ == "__main__":
     plot = Plot(days, sentiments)
     plot.save()
 
-    with open("./scripts/README.md", mode="a") as readme:
-        readme.write("![sentiment graph](./image/graph.png)");
+    with open("./scripts/README_template.md", mode="a") as readme:
+        readme.write("![sentiment graph](./image/graph.png)")
 
     ## 確認用
     with open("./scripts/README.md") as readme:
