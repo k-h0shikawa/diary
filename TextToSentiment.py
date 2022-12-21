@@ -5,8 +5,8 @@ import os
 if __name__ == "__main__":
     sentimentAnalysis = SentimentAnalysis()
     filenames = os.listdir("./text");
-    sentiments = list();
-    days = list();
+    sentiments = list()
+    days = list()
     for filename in filenames:
         sentimentAnalysis.read_file("./text/" + filename)
         sentiment = sentimentAnalysis.analyze()[0]
