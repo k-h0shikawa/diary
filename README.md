@@ -4,4 +4,4 @@
 センチメント分析を行い、その日の環状を客観視できます。  
 
 # グラフ
-![sentiment graph](./image/graph.png)
+![sentiment graph](./graph.png)
