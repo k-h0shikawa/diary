@@ -17,8 +17,16 @@ if __name__ == "__main__":
             sentiments.append(-sentiment["score"])
         else:
             sentiments.append(sentiment["score"])
+    ## 確認用
     print(days)
     print(sentiments)
 
     plot = Plot(days, sentiments)
     plot.save()
+
+    with open("./README.md", mode="a") as readme:
+        readme.write("![sentiment graph](./image/graph.png)");
+
+    ## 確認用
+    with open("./README.md") as readme:
+        print(readme.read())
