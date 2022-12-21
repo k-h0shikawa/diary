@@ -28,5 +28,5 @@ if __name__ == "__main__":
         readme.write("![sentiment graph](./image/graph.png)")
 
     ## 確認用
-    with open("./scripts/README.md") as readme:
+    with open("./scripts/README_template.md") as readme:
         print(readme.read())
