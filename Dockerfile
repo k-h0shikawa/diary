@@ -14,11 +14,6 @@ RUN apt-get install -y vim less
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 
-RUN python -m pip install transformers==4.25.1
-RUN python -m pip install torch===1.9.0 
-RUN python -m pip install torchvision===0.10.0 
-RUN python -m pip install torchaudio===0.9.0
-RUN python -m pip install fugashi==1.2.1
-RUN python -m pip install ipadic==1.0.0
-RUN python -m pip install matplotlib==3.6.2
+COPY ./scripts/requirements.txt /root/
 
+RUN python -m pip install -r /root/requirements.txt
