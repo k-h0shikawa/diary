@@ -8,6 +8,8 @@ if __name__ == "__main__":
     sentiments = list()
     days = list()
     for filename in filenames:
+        if filename.startswith(".") : 
+            continue
         sentimentAnalysis.read_file("./text/" + filename)
         sentiment = sentimentAnalysis.analyze()[0]
         
@@ -17,9 +19,6 @@ if __name__ == "__main__":
             sentiments.append(-sentiment["score"])
         else:
             sentiments.append(sentiment["score"])
-    ## 確認用
-    print(days)
-    print(sentiments)
 
     plot = Plot(days, sentiments)
     plot.save()
